@@ -43,50 +43,15 @@ body {
 
 /* blocks and elements */
 .card {
-  display: grid;
-  max-width: 920px;
-  grid-template-columns: repeat(2, 1fr);
   background: white;
   border-radius: 3rem;
-  background-image: url(../img/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
-  background-position: -200% center;
-  background-size: 80%;
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.2);
-}
-
-.illustration {
-  display: flex;
-  position: relative;
-}
-
-.illustration__woman-wrapper {
-  min-width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.illustration__woman {
-  position: absolute;
-  top: 50%;
-  left: -6rem;
-  transform: translateY(-50%);
-}
-
-.illustration__box {
-  position: absolute;
-  top: 40%;
-  left: -10rem;
-}
-
-.questions {
-  padding: 6rem 6rem 6rem 0;
 }
 
 .questions__title {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 4rem;
   color: var(--title-color);
 }
 
@@ -145,9 +110,83 @@ body {
 /* modifiers */
 
 /* desktop */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1120px) {
+  .card {
+    display: grid;
+    max-width: 920px;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url(../img/bg-pattern-desktop.svg);
+    background-position: -200% center;
+    background-size: 80%;
+  }
+
+  .illustration {
+    display: flex;
+    position: relative;
+  }
+
+  .illustration__woman-wrapper {
+    min-width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .illustration__woman {
+    position: absolute;
+    top: 50%;
+    left: -6rem;
+    transform: translateY(-50%);
+  }
+
+  .illustration__box {
+    position: absolute;
+    top: 40%;
+    left: -10rem;
+  }
+
+  .questions {
+    padding: 6rem 6rem 6rem 0;
+  }
+
+  .questions__title {
+    margin-bottom: 4rem;
+  }
 }
 
 /* mobile */
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1119px) {
+  .card {
+    max-width: 345px;
+    background-image: url(../img/bg-pattern-mobile.svg);
+    margin-top: 10rem;
+    background-position: center top;
+  }
+
+  .illustration {
+    position: relative;
+  }
+
+  .illustration__woman {
+    width: 20rem;
+    position: absolute;
+    top: -9rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .illustration__box {
+    width: 8rem;
+    position: absolute;
+    top: -3rem;
+    left: 4rem;
+  }
+
+  .questions {
+    padding: 12rem 2rem 4rem;
+  }
+
+  .questions__title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 }
