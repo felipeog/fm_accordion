@@ -36,8 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: calc(100vh - 2rem); */
-  min-height: 100vh;
+  min-height: calc(100vh - 2rem);
   padding: 1rem;
 }
 
@@ -107,7 +106,23 @@ body {
   padding: 1rem 0;
 }
 
-/* modifiers */
+.attribution {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution__text {
+  font-size: 0.8rem;
+  text-align: center;
+  color: hsl(238, 29%, 16%);
+}
+
+.attribution__link {
+  font-size: 0.8rem;
+  color: hsl(237, 12%, 33%);
+}
 
 /* desktop */
 @media screen and (min-width: 1120px) {
