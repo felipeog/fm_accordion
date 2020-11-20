@@ -67,14 +67,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+
+.accordion__title {
+  transition: 200ms;
   font-size: 1.4rem;
   font-weight: 400;
-  cursor: pointer;
-  transition: 200ms;
   color: var(--question-color);
 }
 
-.accordion__question:hover {
+.accordion__title:hover {
   color: var(--hover-color);
 }
 
@@ -91,7 +94,7 @@ body {
   line-height: 1.4;
 }
 
-.accordion__checkbox:checked + .accordion__content .accordion__question {
+.accordion__checkbox:checked + .accordion__content .accordion__title {
   font-weight: 700;
 }
 
